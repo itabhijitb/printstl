@@ -37,3 +37,22 @@ int main() {
 	std::cout << pprint::pprint<elem_type , pprint::get_type_property<elem_type>()>()(some_stl) << std::endl;
 }
 ```
+
+## Example Output
+```
+{
+ ("key1" :
+           [
+            (1 :<1>),
+            (2 :<2>),
+            (3 :<3>)]),
+ ("key2" :
+           [
+            (1 :<1>),
+            (2 :<2>),
+            (3 :<3>)]),
+ ("key3" :
+           [
+            (1 :<1>),
+            (2 :<2>),
+            (3 :<3>)])}```
