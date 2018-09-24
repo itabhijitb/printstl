@@ -119,9 +119,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="c11_type_traits.h" />
     <ClInclude Include="pprintstl.h" />
   </ItemGroup>

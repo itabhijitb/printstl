@@ -1,3 +1,4 @@
+#include "gtest/gtest.h"
 #include <vector>
 #include <memory>
 #include <string>
@@ -5,8 +6,8 @@
 #include <algorithm>
 #include <initializer_list>
 #include <unordered_map>
-#include "pprintstl.h"
-int main() {
+#include "../PrintStl/pprintstl.h"
+TEST(TestCaseName, TestName) {
 	typedef  std::vector<std::pair<int, std::shared_ptr<int>>> VEC_UNIQUEPTR_PROMISES;
 	typedef std::unordered_map<std::string, VEC_UNIQUEPTR_PROMISES> elem_type;
 	elem_type some_stl;
@@ -24,6 +25,7 @@ int main() {
 		});
 		some_stl[key] = vec;
 	}
-	std::cout << std::is_pointer<std::shared_ptr<int>>::value << std::endl;
-	std::cout << pprint::pprint<elem_type , pprint::get_type_property<elem_type>()>()(some_stl) << std::endl;
+	std::cerr << std::is_pointer<std::shared_ptr<int>>::value << std::endl;
+	std::cerr << pprint::pprint<elem_type, pprint::get_type_property<elem_type>()>()(some_stl) << std::endl;
+  EXPECT_TRUE(true);
 }
